@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Zero Gaming — Premium Gaming Portal</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Pyidaungsu:wght@400;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        :root {
+            --green: #00ff9d;
+            --cyan: #00d9ff;
+            --dark: #05080d;
+            --card: rgba(10,17,23,.78);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family: 'Pyidaungsu', sans-serif;
+
+            color: #f5f7fa;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(0,255,157,.12),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 100% 40%,
+                    rgba(0,217,255,.08),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    180deg,
+                    #05080d,
+                    #070b11 50%,
+                    #030507
+                );
+        }
+
+
+        .gaming-font {
+
+            font-family: 'Orbitron', sans-serif;
+
+        }
+
+
+        .glass {
+
+            background: var(--card);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255,255,255,.06);
+
+        }
+
+
+        .neon {
+
+            box-shadow:
+
+                0 0 15px rgba(0,255,157,.20),
+
+                0 0 45px rgba(0,255,157,.06);
+
+        }
+
+
+        .logo-glow {
+
+            box-shadow:
+
+                0 0 15px rgba(0,255,157,.35),
+
+                0 0 35px rgba(0,217,255,.12);
+
+        }
+
+
+        .title-glow {
+
+            text-shadow:
+
+                0 0 15px rgba(0,255,157,.25),
+
+                0 0 35px rgba(0,217,255,.10);
+
+        }
+
+
+        .main-button {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #00c878,
+                    #00ee9a,
+                    #00d9ff
+                );
+
+            color: #02100b;
+
+            box-shadow:
+
+                0 0 20px rgba(0,255,157,.30),
+
+                0 0 45px rgba(0,217,255,.10);
+
+            transition: .3s ease;
+
+        }
+
+
+        .main-button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+
+                0 0 30px rgba(0,255,157,.55),
+
+                0 0 60px rgba(0,217,255,.15);
+
+        }
+
+
+        .feature-card {
+
+            transition: .3s ease;
+
+        }
+
+
+        .feature-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: rgba(0,255,157,.30);
+
+            box-shadow:
+
+                0 10px 35px rgba(0,0,0,.35),
+
+                0 0 25px rgba(0,255,157,.08);
+
+        }
+
+
+        .warning-card {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(255,170,0,.08),
+                    rgba(255,70,70,.04)
+                );
+
+            border: 1px solid rgba(255,170,0,.20);
+
+        }
+
+
+        .tag {
+
+            background: rgba(255,255,255,.025);
+
+            border: 1px solid rgba(255,255,255,.07);
+
+        }
+
+
+        .modal-bg {
+
+            background: rgba(0,0,0,.82);
+
+            backdrop-filter: blur(15px);
+
+            -webkit-backdrop-filter: blur(15px);
+
+        }
+
+
+        .download-box {
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(11,20,26,.96),
+                    rgba(5,10,14,.96)
+                );
+
+            border: 1px solid rgba(0,255,157,.18);
+
+            box-shadow:
+
+                0 25px 80px rgba(0,0,0,.65),
+
+                0 0 35px rgba(0,255,157,.07);
+
+        }
+
+
+        .scan-line {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 1px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(0,255,157,.35),
+                    transparent
+                );
+
+            animation: scan 5s linear infinite;
+
+        }
+
+
+        @keyframes scan {
+
+            from {
+                top: 0;
+            }
+
+            to {
+                top: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="min-h-screen flex flex-col">
+
+
+<!-- ================================================= -->
+<!-- NAVBAR -->
+<!-- ================================================= -->
+
+<nav class="glass sticky top-0 z-50
+            px-5 md:px-8 py-4
+            border-b border-white/5">
+
+    <div class="max-w-6xl mx-auto
+                flex items-center justify-between">
+
+
+        <!-- LOGO -->
+
+        <div class="flex items-center gap-3">
+
+            <div class="w-11 h-11
+                        rounded-xl
+                        flex items-center
+                        justify-center
+                        bg-black/40
+                        border border-emerald-400/20
+                        logo-glow">
+
+                <i class="fa-solid fa-gamepad
+                          text-xl text-emerald-400">
+                </i>
+
+            </div>
+
+
+            <div>
+
+                <div class="gaming-font
+                            font-black
+                            tracking-wider
+                            text-white">
+
+                    ZERO
+
+                    <span class="text-emerald-400">
+                        GAMING
+                    </span>
+
+                </div>
+
+
+                <div class="text-[9px]
+                            tracking-[.3em]
+                            text-gray-500">
+
+                    PREMIUM GAMING
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div class="hidden sm:flex
+                    items-center gap-2
+                    text-xs text-gray-500">
+
+            <span class="w-2 h-2
+                         rounded-full
+                         bg-emerald-400
+                         shadow-[0_0_10px_#00ff9d]">
+            </span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================================================= -->
+<!-- MAIN -->
+<!-- ================================================= -->
+
+<main class="relative flex-grow
+            flex items-center
+            justify-center
+            px-4 py-12
+            overflow-hidden">
+
+
+    <div class="scan-line opacity-30"></div>
+
+
+    <div class="max-w-3xl
+                w-full
+                text-center">
+
+
+        <!-- ================================================= -->
+        <!-- APP ICON -->
+        <!-- ================================================= -->
+
+        <div class="relative
+                    inline-block
+                    mb-7">
+
+
+            <div class="absolute
+                        -inset-3
+                        rounded-[2rem]
+                        bg-gradient-to-r
+                        from-emerald-500/30
+                        to-cyan-500/20
+                        blur-2xl">
+            </div>
+
+
+            <div class="relative
+                        w-28 h-28
+                        rounded-[2rem]
+                        glass
+                        neon
+                        flex items-center
+                        justify-center">
+
+
+                <i class="fa-solid
+                          fa-crosshairs
+                          text-5xl
+                          text-emerald-400">
+                </i>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- TITLE -->
+        <!-- ================================================= -->
+
+        <div class="space-y-4">
+
+
+            <div class="text-xs
+                        tracking-[.45em]
+                        text-emerald-400
+                        font-bold">
+
+                ZERO GAMING // 2026
+
+            </div>
+
+
+            <h1 class="gaming-font
+                       text-4xl
+                       md:text-6xl
+                       font-black
+                       tracking-wide
+                       title-glow">
+
+                ZERO
+
+                <span class="text-emerald-400">
+                    PUBG
+                </span>
+
+            </h1>
+
+
+            <p class="text-gray-400
+                      text-sm
+                      md:text-base
+                      max-w-xl
+                      mx-auto
+                      leading-7">
+
+                Premium Gaming Utility Portal
+
+                <br>
+
+                <span class="text-gray-500">
+                    Clean • Fast • Modern
+                </span>
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- WARNING -->
+        <!-- ================================================= -->
+
+        <div class="warning-card
+                    rounded-2xl
+                    p-5
+                    md:p-6
+                    mt-8
+                    text-left">
+
+
+            <div class="flex items-center gap-3 mb-4">
+
+
+                <div class="w-10 h-10
+                            rounded-xl
+                            bg-yellow-500/10
+                            border border-yellow-500/20
+                            flex items-center
+                            justify-center">
+
+                    <i class="fa-solid
+                              fa-triangle-exclamation
+                              text-yellow-400">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="font-bold text-white">
+
+                        သတိပေးချက်
+
+                    </h3>
+
+
+                    <p class="text-[10px]
+                              tracking-wider
+                              text-gray-500">
+
+                        IMPORTANT NOTICE
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURE TAGS -->
+
+            <div class="flex flex-wrap
+                        gap-2
+                        mb-4">
+
+
+                <span class="tag px-3 py-1
+                             rounded-lg
+                             text-xs text-gray-300">
+
+                    ESP
+
+                </span>
+
+
+                <span class="tag px-3 py-1
+                             rounded-lg
+                             text-xs text-gray-300">
+
+                    Wall Color
+
+                </span>
+
+
+                <span class="tag px-3 py-1
+                             rounded-lg
+                             text-xs text-gray-300">
+
+                    Aim Bot
+
+                </span>
+
+
+                <span class="tag px-3 py-1
+                             rounded-lg
+                             text-xs text-gray-300">
+
+                    Magic Bullet
+
+                </span>
+
+
+                <span class="tag px-3 py-1
+                             rounded-lg
+                             text-xs text-gray-300">
+
+                    iPad View
+
+                </span>
+
+            </div>
+
+
+
+            <p class="text-sm
+                      text-gray-300
+                      leading-7">
+
+
+                <span class="text-yellow-400
+                             font-semibold">
+
+                    Aim Bot
+
+                </span>
+
+
+                နှင့်
+
+
+                <span class="text-yellow-400
+                             font-semibold">
+
+                    Magic Bullet
+
+                </span>
+
+
+                ကဲ့သို့သော Feature များသည်
+                Game ၏ Anti-Cheat စနစ်မှ
+                စစ်ဆေးတွေ့ရှိနိုင်ပါသည်။
+
+
+            </p>
+
+
+
+            <div class="mt-4
+                        pt-4
+                        border-t
+                        border-white/5">
+
+
+                <p class="text-xs
+                          text-red-400
+                          leading-6">
+
+                    ⚠️ Account Ban ခံရနိုင်သည့်
+                    Risk ရှိပါသည်။
+
+                </p>
+
+
+                <p class="text-xs
+                          text-gray-500
+                          mt-1
+                          leading-6">
+
+                    အသုံးပြုမည့်သူများအနေဖြင့်
+                    Account Ban ဖြစ်နိုင်ခြေကို
+                    နားလည်ပြီး မိမိ၏ Account
+                    အတွက် တာဝန်ယူအသုံးပြုပါ။
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- FEATURES -->
+        <!-- ================================================= -->
+
+        <div class="grid
+                    grid-cols-3
+                    gap-3
+                    mt-5">
+
+
+            <div class="feature-card
+                        glass
+                        rounded-2xl
+                        p-4">
+
+
+                <i class="fa-solid
+                          fa-shield-halved
+                          text-emerald-400
+                          text-xl
+                          mb-2">
+                </i>
+
+
+                <p class="text-xs
+                          text-gray-300
+                          font-semibold">
+
+                    SECURITY
+
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card
+                        glass
+                        rounded-2xl
+                        p-4">
+
+
+                <i class="fa-solid
+                          fa-gauge-high
+                          text-cyan-400
+                          text-xl
+                          mb-2">
+                </i>
+
+
+                <p class="text-xs
+                          text-gray-300
+                          font-semibold">
+
+                    PERFORMANCE
+
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card
+                        glass
+                        rounded-2xl
+                        p-4">
+
+
+                <i class="fa-solid
+                          fa-bolt
+                          text-emerald-400
+                          text-xl
+                          mb-2">
+                </i>
+
+
+                <p class="text-xs
+                          text-gray-300
+                          font-semibold">
+
+                    FAST
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- DOWNLOAD BUTTON -->
+        <!-- ================================================= -->
+
+        <div class="mt-8">
+
+
+            <button
+                onclick="openModal()"
+                class="main-button
+                       w-full
+                       sm:w-auto
+                       inline-flex
+                       items-center
+                       justify-center
+                       gap-3
+                       font-bold
+                       px-9
+                       py-4
+                       rounded-2xl
+                       text-base
+                       cursor-pointer">
+
+
+                <i class="fa-solid
+                          fa-download">
+                </i>
+
+
+                APK ကို ဒေါင်းလုဒ်လုပ်မည်
+
+
+            </button>
+
+
+            <p class="text-[11px]
+                      text-gray-600
+                      mt-4">
+
+
+                <i class="fa-solid
+                          fa-circle-check
+                          text-emerald-500
+                          mr-1">
+                </i>
+
+
+                Version 1.0.0
+                •
+                Android 7.0+
+
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
+<footer class="border-t
+               border-white/5
+               text-center
+               py-6
+               text-gray-600
+               text-xs">
+
+
+    <p>
+
+        © 2026
+
+        <span class="text-emerald-500">
+            Zero Gaming
+        </span>
+
+        — All rights reserved.
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- ================================================= -->
+<!-- DOWNLOAD MODAL -->
+<!-- ================================================= -->
+
+<div id="downloadModal"
+     class="fixed inset-0
+            modal-bg
+            z-50
+            flex items-center
+            justify-center
+            p-4
+            hidden
+            opacity-0
+            transition-opacity
+            duration-300">
+
+
+    <div id="modalContent"
+         class="download-box
+                max-w-md
+                w-full
+                p-6
+                rounded-3xl
+                transform
+                scale-95
+                transition-transform
+                duration-300
+                relative">
+
+
+        <!-- CLOSE -->
+
+        <button
+            onclick="closeModal()"
+            class="absolute
+                   top-4
+                   right-4
+                   w-9
+                   h-9
+                   rounded-full
+                   bg-white/5
+                   border border-white/5
+                   text-gray-400
+                   hover:text-white
+                   transition">
+
+
+            <i class="fa-solid
+                      fa-xmark">
+            </i>
+
+
+        </button>
+
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="text-center
+                    space-y-3
+                    mb-6">
+
+
+            <div class="inline-flex
+                        w-16
+                        h-16
+                        rounded-2xl
+                        bg-emerald-500/10
+                        border border-emerald-500/20
+                        items-center
+                        justify-center
+                        logo-glow">
+
+
+                <i class="fa-solid
+                          fa-cloud-arrow-down
+                          text-2xl
+                          text-emerald-400">
+                </i>
+
+
+            </div>
+
+
+
+            <h3 class="gaming-font
+                       text-xl
+                       font-bold">
+
+                ZERO GAMING
+
+            </h3>
+
+
+
+            <p class="text-sm
+                      text-gray-500
+                      leading-6">
+
+                နောက်ဆုံးထွက်ဗားရှင်းကို
+                အောက်ပါခလုတ်မှတစ်ဆင့်
+                ဒေါင်းလုဒ်ဆွဲနိုင်ပါသည်။
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- APP DETAILS -->
+
+        <div class="bg-black/30
+                    rounded-2xl
+                    p-4
+                    border border-white/5
+                    space-y-3
+                    mb-6
+                    text-sm">
+
+
+            <div class="flex justify-between">
+
+                <span class="text-gray-500">
+                    File Size
+                </span>
+
+                <span class="text-gray-200">
+                    15 MB
+                </span>
+
+            </div>
+
+
+
+            <div class="flex justify-between">
+
+                <span class="text-gray-500">
+                    Version
+                </span>
+
+                <span class="text-emerald-400">
+                    v1.0.0
+                </span>
+
+            </div>
+
+
+
+            <div class="flex justify-between">
+
+                <span class="text-gray-500">
+                    Android
+                </span>
+
+                <span class="text-gray-200">
+                    7.0+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- MEDIAFIRE DOWNLOAD -->
+        <!-- ================================================= -->
+
+        <a href="https://www.mediafire.com/file/kd99rape0kc001m/Zero_Gaming.apk/file"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="main-button
+                  w-full
+                  block
+                  text-center
+                  font-bold
+                  py-3.5
+                  rounded-xl">
+
+
+            <i class="fa-solid
+                      fa-download
+                      mr-2">
+            </i>
+
+
+            ဒေါင်းလုဒ်စတင်ရန်
+
+
+        </a>
+
+
+
+        <p class="text-[10px]
+                  text-gray-600
+                  text-center
+                  mt-3">
+
+            Download hosted by MediaFire
+
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+
+    const modal =
+        document.getElementById(
+            'downloadModal'
+        );
+
+
+    const modalContent =
+        document.getElementById(
+            'modalContent'
+        );
+
+
+
+    function openModal() {
+
+
+        modal.classList.remove(
+            'hidden'
+        );
+
+
+        setTimeout(() => {
+
+
+            modal.classList.remove(
+                'opacity-0'
+            );
+
+
+            modalContent.classList.remove(
+                'scale-95'
+            );
+
+
+            modalContent.classList.add(
+                'scale-100'
+            );
+
+
+        }, 10);
+
+    }
+
+
+
+    function closeModal() {
+
+
+        modal.classList.add(
+            'opacity-0'
+        );
+
+
+        modalContent.classList.remove(
+            'scale-100'
+        );
+
+
+        modalContent.classList.add(
+            'scale-95'
+        );
+
+
+        setTimeout(() => {
+
+
+            modal.classList.add(
+                'hidden'
+            );
+
+
+        }, 300);
+
+    }
+
+
+
+    window.onclick = function(event) {
+
+
+        if (
+            event.target === modal
+        ) {
+
+            closeModal();
+
+        }
+
+    };
+
+
+</script>
+
+
+</body>
+
+</html>
+
